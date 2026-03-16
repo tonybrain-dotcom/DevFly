@@ -1,0 +1,216 @@
+import type { Metadata } from 'next'
+import Link from 'next/link'
+import Image from 'next/image'
+import { ArrowRight, CheckCircle, Users, Zap, Target, Heart } from 'lucide-react'
+
+export const metadata: Metadata = {
+  title: 'About',
+  description: 'Learn about DevFly — a small, senior software development team building world-class web apps and SaaS platforms for US startups and businesses.',
+}
+
+const values = [
+  {
+    icon: Zap,
+    title: 'Speed without compromise',
+    desc: 'We move fast because our process is proven — not because we skip steps. Quality is non-negotiable.',
+  },
+  {
+    icon: Target,
+    title: 'Outcome-focused',
+    desc: 'We care about business results, not just lines of code. Every decision maps back to your goals.',
+  },
+  {
+    icon: Users,
+    title: 'True partnership',
+    desc: "We embed in your team, communicate proactively, and treat your product like it's our own.",
+  },
+  {
+    icon: Heart,
+    title: 'Craft & craftsmanship',
+    desc: 'We take pride in clean architecture, readable code, and interfaces that users love.',
+  },
+]
+
+const differentiators = [
+  'Senior-only team — no juniors learning on your project',
+  'Freelancer pricing, agency-level execution and accountability',
+  'Weekly demos and transparent project tracking',
+  'Direct communication — no account managers or middlemen',
+  'We care about your product, not just the invoice',
+  'US-timezone availability and fluent English communication',
+]
+
+const timeline = [
+  { year: '2018', event: 'Combined 10+ years of experience building software for top tech companies.' },
+  { year: '2020', event: 'Started taking on freelance clients — first $500k in client project value.' },
+  { year: '2022', event: 'Formalised as DevFly. First agency-level project delivery for US startup.' },
+  { year: '2024', event: '50+ projects delivered. Expanded team with vetted senior specialists.' },
+  { year: '2026', event: 'Focused exclusively on US startups and growth-stage companies.' },
+]
+
+export default function AboutPage() {
+  return (
+    <>
+      {/* Hero */}
+      <section className="py-24 bg-dark-900 bg-hero-grid relative overflow-hidden">
+        <div className="absolute top-1/3 left-1/4 w-96 h-96 bg-brand-600/15 rounded-full blur-3xl" />
+        <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <span className="section-tag">About DevFly</span>
+          <h1 className="section-title text-5xl lg:text-6xl">
+            Small Team. <span className="gradient-text">Big Delivery.</span>
+          </h1>
+          <p className="section-subtitle mx-auto mt-4 text-lg">
+            DevFly is a high-expertise software development team building web applications, SaaS platforms, and startup MVPs for US businesses. We combine the cost-efficiency of freelancers with the accountability and quality of a top-tier agency.
+          </p>
+        </div>
+      </section>
+
+      {/* Mission & Vision */}
+      <section className="py-20 bg-dark-800/50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-2 gap-10">
+          <div className="card">
+            <h2 className="text-2xl font-black text-white mb-4">Our Mission</h2>
+            <p className="text-gray-400 leading-relaxed text-lg">
+              To help US startups and businesses build exceptional software — faster than they thought possible and at a price that makes sense. We believe great software should not require a $500k engineering hire or a bloated agency retainer.
+            </p>
+          </div>
+          <div className="card border-brand-500/30">
+            <h2 className="text-2xl font-black text-white mb-4">Our Vision</h2>
+            <p className="text-gray-400 leading-relaxed text-lg">
+              To become the go-to development partner for US startups at the product-building stage — known for shipping fast, communicating clearly, and delivering results that move businesses forward.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Team */}
+      <section className="py-20 bg-dark-900">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-14">
+            <span className="section-tag">The Team</span>
+            <h2 className="section-title">
+              People Behind <span className="gradient-text">DevFly</span>
+            </h2>
+          </div>
+          <div className="grid md:grid-cols-2 gap-8 max-w-3xl mx-auto">
+            <div className="card text-center">
+              <div className="w-24 h-24 rounded-2xl overflow-hidden mx-auto mb-4 relative">
+                <Image
+                  src="/tony-brain.png"
+                  alt="Tony Brain — Technical Lead"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <h3 className="text-xl font-bold text-white mb-1">Tony Brain</h3>
+              <p className="text-brand-400 text-sm font-semibold mb-3">Technical Lead & Co-founder</p>
+              <p className="text-gray-400 text-sm leading-relaxed">
+                Full-stack engineer with 8+ years of experience building web applications and SaaS platforms. Specialises in React, Node.js, and cloud architecture. Leads all technical delivery at DevFly.
+              </p>
+            </div>
+            <div className="card text-center">
+              <div className="w-24 h-24 rounded-2xl overflow-hidden mx-auto mb-4 relative">
+                <Image
+                  src="/mena-yousef.jpg"
+                  alt="Mena Yousef — Sales & Client Strategy"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <h3 className="text-xl font-bold text-white mb-1">Mena Yousef</h3>
+              <p className="text-brand-400 text-sm font-semibold mb-3">Sales & Client Strategy</p>
+              <p className="text-gray-400 text-sm leading-relaxed">
+                Business development and client relations expert. Ensures every client engagement starts with clear alignment on goals, scope, and expectations — and ends with a satisfied client.
+              </p>
+            </div>
+          </div>
+          <div className="text-center mt-10">
+            <p className="text-gray-400 max-w-xl mx-auto">
+              For larger projects, we bring in vetted senior specialists from our trusted network — frontend, backend, design, and DevOps — all pre-screened and held to the same standards.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Why DevFly */}
+      <section className="py-20 bg-dark-800/50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-12 items-center">
+          <div>
+            <span className="section-tag">Why DevFly</span>
+            <h2 className="section-title text-4xl">
+              The Right Mix of <span className="gradient-text">Price & Quality</span>
+            </h2>
+            <p className="text-gray-400 leading-relaxed mb-6 text-lg">
+              Most founders face a hard choice: hire an expensive agency and get bloated overhead, or hire individual freelancers and manage chaos. DevFly is the third option.
+            </p>
+            <ul className="space-y-3">
+              {differentiators.map((item) => (
+                <li key={item} className="flex items-start gap-3 text-gray-300 text-sm">
+                  <CheckCircle className="w-5 h-5 text-accent-400 shrink-0 mt-0.5" />
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div className="grid grid-cols-2 gap-4">
+            {values.map((v) => {
+              const Icon = v.icon
+              return (
+                <div key={v.title} className="card">
+                  <div className="w-10 h-10 bg-brand-600/20 rounded-lg flex items-center justify-center mb-3">
+                    <Icon className="w-5 h-5 text-brand-400" />
+                  </div>
+                  <h3 className="font-bold text-white text-sm mb-1">{v.title}</h3>
+                  <p className="text-gray-400 text-xs leading-relaxed">{v.desc}</p>
+                </div>
+              )
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* Timeline */}
+      <section className="py-20 bg-dark-900">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-14">
+            <span className="section-tag">Our Journey</span>
+            <h2 className="section-title text-4xl">
+              How We Got <span className="gradient-text">Here</span>
+            </h2>
+          </div>
+          <div className="relative">
+            <div className="absolute left-[72px] top-3 bottom-3 w-px bg-white/10" />
+            <div className="space-y-8">
+              {timeline.map((item) => (
+                <div key={item.year} className="flex gap-6 items-start">
+                  <div className="w-16 text-right shrink-0">
+                    <span className="text-brand-400 font-bold text-sm">{item.year}</span>
+                  </div>
+                  <div className="relative">
+                    <div className="absolute -left-[13px] top-1.5 w-2.5 h-2.5 rounded-full bg-brand-500 border-2 border-dark-900" />
+                  </div>
+                  <p className="text-gray-300 text-sm leading-relaxed pt-px">{item.event}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="py-20 bg-dark-800/50">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-3xl md:text-4xl font-black text-white mb-4">
+            Let&apos;s build something great together.
+          </h2>
+          <p className="text-gray-400 mb-8">
+            We only take on projects we believe in. Tell us yours — we&apos;ll tell you honestly if we&apos;re the right fit.
+          </p>
+          <Link href="/contact" className="btn-primary text-base px-8 py-3.5">
+            Start a Conversation <ArrowRight className="w-4 h-4" />
+          </Link>
+        </div>
+      </section>
+    </>
+  )
+}
