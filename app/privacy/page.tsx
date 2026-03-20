@@ -30,8 +30,8 @@ export default function PrivacyPage() {
           <h2 className="text-white text-xl font-bold mt-6 mb-2">Contact</h2>
           <p>
             If you have any questions about this Privacy Policy, contact us at{' '}
-            <a href="mailto:yousef.mena@gmail.com" className="text-brand-400 hover:underline">
-              yousef.mena@gmail.com
+            <a href="mailto:tony.brain@kandykoi.com" className="text-brand-400 hover:underline">
+              tony.brain@kandykoi.com
             </a>.
           </p>
         </div>

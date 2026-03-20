@@ -56,11 +56,11 @@ export default function Footer() {
             </p>
             <div className="flex items-center gap-3 mt-6">
               <a
-                href="mailto:yousef.mena@gmail.com"
+                href="mailto:tony.brain@kandykoi.com"
                 className="flex items-center gap-2 text-sm text-gray-400 hover:text-brand-400 transition-colors"
               >
                 <Mail className="w-4 h-4" />
-                yousef.mena@gmail.com
+                tony.brain@kandykoi.com
               </a>
             </div>
             <div className="flex gap-3 mt-4">

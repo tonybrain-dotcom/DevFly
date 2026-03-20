@@ -83,10 +83,10 @@ export default function ContactPage() {
               </div>
               <h3 className="font-bold text-white text-sm mb-1">Send an Email</h3>
               <a
-                href="mailto:yousef.mena@gmail.com"
+                href="mailto:tony.brain@kandykoi.com"
                 className="text-brand-400 hover:text-brand-300 text-sm transition-colors break-all"
               >
-                yousef.mena@gmail.com
+                tony.brain@kandykoi.com
               </a>
               <p className="text-gray-500 text-xs mt-1">We reply within 24 hours.</p>
             </div>

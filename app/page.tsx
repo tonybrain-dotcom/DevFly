@@ -477,8 +477,8 @@ function FinalCTASection() {
           </form>
           <p className="text-center text-xs text-gray-500 mt-4">
             Or email us directly at{' '}
-            <a href="mailto:yousef.mena@gmail.com" className="text-brand-400 hover:underline">
-              yousef.mena@gmail.com
+            <a href="mailto:tony.brain@kandykoi.com" className="text-brand-400 hover:underline">
+              tony.brain@kandykoi.com
             </a>
           </p>
         </div>

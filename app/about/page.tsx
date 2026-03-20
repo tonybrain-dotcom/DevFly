@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import Image from 'next/image'
-import { ArrowRight, CheckCircle, Users, Zap, Target, Heart } from 'lucide-react'
+import { ArrowRight, CheckCircle, Users, Zap, Target, Heart, Handshake } from 'lucide-react'
 
 export const metadata: Metadata = {
   title: 'About',
@@ -109,15 +109,10 @@ export default function AboutPage() {
               </p>
             </div>
             <div className="card text-center">
-              <div className="w-24 h-24 rounded-2xl overflow-hidden mx-auto mb-4 relative">
-                <Image
-                  src="/mena-yousef.jpg"
-                  alt="Mena Yousef — Sales & Client Strategy"
-                  fill
-                  className="object-cover"
-                />
+              <div className="w-24 h-24 rounded-2xl mx-auto mb-4 bg-brand-600/15 border border-brand-500/20 flex items-center justify-center">
+                <Handshake className="w-10 h-10 text-brand-400" />
               </div>
-              <h3 className="text-xl font-bold text-white mb-1">Mena Yousef</h3>
+              <h3 className="text-xl font-bold text-white mb-1">Partner</h3>
               <p className="text-brand-400 text-sm font-semibold mb-3">Sales & Client Strategy</p>
               <p className="text-gray-400 text-sm leading-relaxed">
                 Business development and client relations expert. Ensures every client engagement starts with clear alignment on goals, scope, and expectations — and ends with a satisfied client.
