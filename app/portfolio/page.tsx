@@ -81,7 +81,7 @@ export default function PortfolioPage() {
                     <Github className="w-3.5 h-3.5" /> Code
                   </a>
                   <Link
-                    href={project.demoHref}
+                    href={`/portfolio/demo/${project.slug}`}
                     className="flex items-center gap-1.5 text-xs text-gray-400 hover:text-white transition-colors py-1"
                     aria-label={`${project.title} demo`}
                   >

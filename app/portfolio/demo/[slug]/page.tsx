@@ -4,6 +4,8 @@ import Image from 'next/image'
 import { notFound } from 'next/navigation'
 import { ArrowLeft, ArrowRight, ExternalLink, Github } from 'lucide-react'
 import { getProjectBySlug, projects } from '../../projects'
+import { demoContentBySlug } from '../demoContent'
+import ProjectDemoPlayground from './ProjectDemoPlayground'
 
 type DemoProjectPageProps = {
   params: {
@@ -32,8 +34,9 @@ export function generateMetadata({ params }: DemoProjectPageProps): Metadata {
 
 export default function DemoProjectPage({ params }: DemoProjectPageProps) {
   const project = getProjectBySlug(params.slug)
+  const demoContent = demoContentBySlug[params.slug]
 
-  if (!project) {
+  if (!project || !demoContent) {
     notFound()
   }
 
@@ -52,7 +55,7 @@ export default function DemoProjectPage({ params }: DemoProjectPageProps) {
                 {project.category}
               </span>
               <h1 className="section-title text-4xl lg:text-5xl">{project.title}</h1>
-              <p className="text-gray-300 text-lg leading-relaxed mt-4 max-w-2xl">{project.demoSummary}</p>
+              <p className="text-gray-300 text-lg leading-relaxed mt-4 max-w-2xl">{demoContent.intro}</p>
 
               <div className="grid sm:grid-cols-3 gap-3 mt-7">
                 {project.metrics.map((item) => (
@@ -154,6 +157,34 @@ export default function DemoProjectPage({ params }: DemoProjectPageProps) {
                 Explore Profile <ExternalLink className="w-4 h-4" />
               </a>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-14 bg-dark-800/40 border-y border-white/5">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-2xl font-bold text-white mb-6">Interactive Product Demo</h2>
+          <ProjectDemoPlayground slug={project.slug} />
+
+          <div className="h-px bg-white/10 my-10" />
+
+          <h2 className="text-2xl font-bold text-white mb-2">Demo Flow</h2>
+          <p className="text-sm text-gray-400 mb-6">{demoContent.livePreviewLabel}</p>
+
+          <div className="grid md:grid-cols-3 gap-4">
+            {demoContent.scenarios.map((scenario) => (
+              <article key={scenario.title} className="card p-5">
+                <p className="text-sm font-semibold text-white mb-2">{scenario.title}</p>
+                <p className="text-sm text-gray-300 leading-relaxed">{scenario.summary}</p>
+                <p className="text-xs text-accent-400 mt-4 uppercase tracking-wide">{scenario.impact}</p>
+              </article>
+            ))}
+          </div>
+
+          <div className="mt-8">
+            <Link href="/portfolio" className="inline-flex items-center gap-2 text-sm text-gray-300 hover:text-white transition-colors">
+              Explore more portfolio demos <ArrowRight className="w-4 h-4" />
+            </Link>
           </div>
         </div>
       </section>
