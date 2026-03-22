@@ -9,6 +9,16 @@ import {
 export const metadata: Metadata = {
   title: 'Services',
   description: 'Custom web applications, SaaS platforms, startup MVPs, e-commerce, API development, and UI/UX implementation by DevFly.',
+  alternates: {
+    canonical: '/services',
+  },
+  openGraph: {
+    title: 'DevFly Services',
+    description:
+      'Explore DevFly software development services: custom web apps, SaaS, startup MVPs, APIs, and e-commerce builds.',
+    url: '/services',
+    type: 'website',
+  },
 }
 
 const services = [

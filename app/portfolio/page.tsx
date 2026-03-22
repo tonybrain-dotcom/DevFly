@@ -7,6 +7,16 @@ import { projects } from './projects'
 export const metadata: Metadata = {
   title: 'Portfolio',
   description: 'Case studies and featured projects built by DevFly — web apps, SaaS platforms, and startup MVPs.',
+  alternates: {
+    canonical: '/portfolio',
+  },
+  openGraph: {
+    title: 'DevFly Portfolio',
+    description:
+      'Browse DevFly case studies across web apps, SaaS platforms, and startup MVP delivery projects.',
+    url: '/portfolio',
+    type: 'website',
+  },
 }
 
 export default function PortfolioPage() {

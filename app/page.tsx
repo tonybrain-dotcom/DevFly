@@ -1,3 +1,4 @@
+import type { Metadata } from 'next'
 import Link from 'next/link'
 import Image from 'next/image'
 import {
@@ -15,6 +16,28 @@ import {
   Zap,
   Shield,
 } from 'lucide-react'
+
+export const metadata: Metadata = {
+  title: 'Web App, SaaS & MVP Development Agency',
+  description:
+    'DevFly builds custom web applications, SaaS platforms, and startup MVPs for US businesses. Next.js, React, Node.js, and AWS experts.',
+  alternates: {
+    canonical: '/',
+  },
+  openGraph: {
+    title: 'DevFly — Web App, SaaS & MVP Development Agency',
+    description:
+      'Custom web apps, SaaS products, and startup MVPs built fast with senior engineers.',
+    url: '/',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'DevFly — Web App, SaaS & MVP Development Agency',
+    description:
+      'Custom web apps, SaaS products, and startup MVPs built fast with senior engineers.',
+  },
+}
 
 // ─── DATA ───────────────────────────────────────────────────────────────────
 

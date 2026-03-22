@@ -4,6 +4,14 @@ import { ArrowLeft } from 'lucide-react'
 
 export const metadata: Metadata = {
   title: 'Privacy Policy',
+  description: 'Read the DevFly Privacy Policy describing how we collect and use information.',
+  alternates: {
+    canonical: '/privacy',
+  },
+  robots: {
+    index: false,
+    follow: true,
+  },
 }
 
 export default function PrivacyPage() {

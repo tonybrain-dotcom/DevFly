@@ -4,6 +4,14 @@ import { ArrowLeft } from 'lucide-react'
 
 export const metadata: Metadata = {
   title: 'Terms of Service',
+  description: 'Read the DevFly Terms of Service for using this website and contacting our team.',
+  alternates: {
+    canonical: '/terms',
+  },
+  robots: {
+    index: false,
+    follow: true,
+  },
 }
 
 export default function TermsPage() {

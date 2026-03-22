@@ -6,6 +6,16 @@ import { ArrowRight, CheckCircle, Users, Zap, Target, Heart, Handshake } from 'l
 export const metadata: Metadata = {
   title: 'About',
   description: 'Learn about DevFly — a small, senior software development team building world-class web apps and SaaS platforms for US startups and businesses.',
+  alternates: {
+    canonical: '/about',
+  },
+  openGraph: {
+    title: 'About DevFly',
+    description:
+      'Meet the senior software team behind DevFly and learn how we deliver startup and SaaS products.',
+    url: '/about',
+    type: 'website',
+  },
 }
 
 const values = [

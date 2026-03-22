@@ -9,6 +9,16 @@ import {
 export const metadata: Metadata = {
   title: 'Our Process',
   description: 'DevFly\'s proven development process — from discovery to launch. Transparent, iterative, and built for predictable delivery.',
+  alternates: {
+    canonical: '/process',
+  },
+  openGraph: {
+    title: 'DevFly Development Process',
+    description:
+      'See how DevFly plans, designs, builds, tests, and launches software projects with transparent delivery.',
+    url: '/process',
+    type: 'website',
+  },
 }
 
 const phases = [
