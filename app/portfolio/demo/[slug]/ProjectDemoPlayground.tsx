@@ -1,6 +1,6 @@
 'use client'
 
-import { useMemo, useState } from 'react'
+import { useState } from 'react'
 import type { PortfolioProject } from '../../projects'
 
 type ProjectSlug = PortfolioProject['slug']
@@ -259,14 +259,10 @@ function EcommerceDemo() {
   ]
   const [cart, setCart] = useState<Record<string, number>>({})
 
-  const total = useMemo(
-    () =>
-      products.reduce((sum, product) => {
-        const qty = cart[product.id] ?? 0
-        return sum + qty * product.price
-      }, 0),
-    [cart]
-  )
+  const total = products.reduce((sum, product) => {
+    const qty = cart[product.id] ?? 0
+    return sum + qty * product.price
+  }, 0)
 
   return (
     <div className="card p-6 space-y-5">
